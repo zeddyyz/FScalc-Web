@@ -1,0 +1,24 @@
+body {
+  font-family: "Sen", sans-serif;
+  background-color: #000000;
+  color: #ffff;
+}
+
+.navbar {
+  background-color: #1c1c1e;
+}
+
+.card-title {
+  background: -webkit-linear-gradient(#647dee, #7f53ac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  background-color: #1c1c1e;
+  border-radius: 12px;
+}
+
+.form-label {
+  color: #ebebf5b0 !important;
+}

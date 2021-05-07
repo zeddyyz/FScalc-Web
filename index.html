@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css">
+    <title>FScalc-Web</title>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">FScalc</a>
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/forex.html">Forex</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card mx-2 mt-4">
+                <div class="card-title mt-4 ms-3">
+                    <h2>Percent</h2>
+                </div>
+                <div class="card-text mx-3">
+                    <div class="form-outline mb-3">
+                        <input type="text" id="account_size" class="form-control" />
+                        <label class="form-label" for="form1Example1">Account Size</label>
+                    </div>
+                    <div class="form-outline mb-3">
+                        <input type="text" id="risk_percent" class="form-control" />
+                        <label class="form-label" for="form1Example1">Risk Percent</label>
+                    </div>
+                    <div class="form-outline mb-3">
+                        <input type="text" id="currency_conversion" class="form-control" />
+                        <label class="form-label" for="form1Example1">Currency Conversion Rate</label>
+                    </div>
+                    <div class="form-outline mb-3">
+                        <input type="text" id="entry_price" class="form-control" />
+                        <label class="form-label" for="form1Example1">Entry Price</label>
+                    </div>
+                    <div class="form-outline mb-3">
+                        <input type="text" id="stop_loss" class="form-control" />
+                        <label class="form-label" for="form1Example1">Stop Loss</label>
+                    </div>
+                    <div class="form-outline mb-3">
+                        <input type="text" id="target_price" class="form-control" />
+                        <label class="form-label" for="form1Example1">Target Price</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <button class="btn btn-primary btn-block" onclick="calculate_amount()">Calculate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="results_card">
+        <div class="col">
+            <div class="card mb-3 mt-2 mx-2">
+                <div class="card-body ms-2">
+                    <div class="card-title">
+                        <h2>Results</h2>
+                    </div>
+                    <p class="card-text">
+                        <div class="h6">Risk Amount: 
+                            <div id="risk_amount_output"></div>
+                        </div>
+                        <div class="h6">Shares:
+                            <div id="shares_amount_output"></div>
+                        </div>
+                        <div class="h6">Potential Profit:
+                            <div id="profit_amount_output"></div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+    <script src="/app.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+</body>
+</html>
